@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Roboto:wght@100;400&display=swap');
+
+* {
+    margin:0;
+}
+
+body {
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+    border-bottom: solid 2px #cecece;
+    box-shadow: 0 1px 1px #cecece;
+}
+header h1{
+    background-image: url('../img/shoes-logo-2\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 210px; height: 104px;
+}
+nav {display: flex; align-items: center;}
+nav a {
+    text-decoration: none;
+    margin: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+}
+header nav a:hover {
+    border-bottom: 1px solid black;
+    transition: .3s ease-in-out;
+    color: black;
+}
+
+
+
+.faixa { background-color: #C2185B; 
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+    padding: 5px;
+    z-index: 15;
+    position: sticky;
+    top:0;
+}
+.faixa span {z-index: 1;}
+
+
+
+/* SECTION ESTILO */
+h2 {
+    text-align: center;
+    font-size: 50px;
+    margin: 50px auto;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+.estilo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+}
+.estilo img:first-child {
+    margin-right: 50px;
+}
+
+/* SECTION OFF */
+.off {
+    background-color: #C2185B;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    font-family: 'Open Sans', sans-serif;
+}
+.off h2 { 
+    color: white; 
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.card {
+    margin: 10px;
+    width: 260px;
+    height: 388px;
+    background-color: white;
+}
+.card h3 {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    margin: 5px;
+}
+.card p {   
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    text-align: left;
+    margin: 5px;
+}
+
+/* ULTIMA SECTION */
+.ultimasection {
+    margin-top: 160px;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.detalhes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+}
+.detalhes button { 
+    background-color: #C2185B;
+    color: #FFFFFF;
+    width: 400px; height: 90px; margin-top: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 5px;
+}
+.detalhes button:hover {
+    cursor: pointer;
+    background-color: #8a1041;
+    transition: .3s ease-in-out;
+}
+.detalhes p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    text-transform: uppercase;
+    width: 585px;
+}
+.detalhes img {
+    margin-top: 50px;
+    margin-right: 25px;
+}
+
+/* FORMULARIO */
+section h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    color: #575757;
+}
+.trabalhe-conosco {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    color: #575757;
+    padding-bottom: 50px;
+}
+form { 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #9B9B9B;
+}
+form label {
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+form input, #departamentos {height: 25px; border: solid 1px #9B9B9B;}
+form input[type=radio] {
+    appearance: none;
+    background-color: #C4C4C4;
+    width: 15px; height: 15px;
+    margin: 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+}
+
+form input[type=radio]::before {
+    content: '';
+    position: absolute;
+    height: 10px; width: 10px;
+    background: none;
+    width: 4px;
+    margin: 25%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg);
+    bottom: 5%; left: 5%;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+form input[type=radio]:checked:before {
+    opacity: 1;
+}
+
+form input[type=checkbox] {
+    appearance: none;
+    background-color: #C4C4C4;
+    width: 15px; height: 15px;
+    margin: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+}
+
+form input[type=checkbox]::before {
+    content: '';
+    position: absolute;
+    height: 8px; width: 8px;
+    background: none;
+    width: 4px;
+    margin: 25%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg);
+    bottom: 5%; left: 5%;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+form input[type=checkbox]:checked:before {
+    opacity: 1;
+}
+
+form button{
+    height: 30px;
+    background-color: #C2185B;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    margin-top: 20px;
+    transition-duration: .5s;
+}
+form button:hover {background-color: rgb(163, 35, 86); cursor: pointer; transition: .3s ease-in-out;}
+
+form p { margin-top: 10px;}
+
+.disponibilidade label, .contato label {
+    margin-right: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.curriculo { display: flex; align-items: center; margin-top: 10px;}
+.curriculo input { display:none }
+.curriculo label { 
+    width: 118px;
+    height: 15px;
+    color: white;
+    margin-left: 15px;
+    background-color: #C4C4C4;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    transition-duration: 2s;
+}
+.curriculo label:hover {
+    background-color: #a3a3a3; cursor: pointer; transition: .3s ease-in-out}
+.curriculo p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.texto p {margin-top: 15px;}
+
+
+/* FOOTER */
+footer {
+    background-color: #C2185B;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffffdb;
+    width: 100%;
+}
+.logofoot {
+    margin: 0 auto;
+    width: 330px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.logofoot p {
+    font-size: 12px;
+}
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+footer a {
+    text-decoration: none;
+    color: #ffffff90;
+}
+footer span {
+    font-weight: bold;
+}
+footer p:hover, a:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+footer ul {
+    margin: 10px 35px;
+    padding: 10px;
+    list-style: none;
+    
+}
+
+
+
+
+
+/* RESPONSIVITY */
+
+@media screen and (max-width: 768px) {
+    body { width: 100%; }
+    /* HEADER */
+    header {width: 100%; height: 90%; margin: 0 auto;}
+    header h1 {display: none}
+    nav a{ font-size: 12px; }
+    
+    /* HOME */
+    main section {display:flex; flex-direction: column; }
+    main h2 { font-size: 20px; margin: 10px;}
+
+    /* FORMULARIO */
+    .trabalhe-conosco {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 95%;
+    }
+    section h2 {font-size: 15px; margin: 0 10px;}
+    section label { font-size: 15px;}
+    section input { height: 15px;}
+    
+    form {width: 90%; display: flex; flex-direction: column; margin: 0 10px;}
+    .texto {width: 90%; margin-left: 0;}
+
+    /* FOOTER */
+    footer {width: 100%; height: 250px;}
+    .logofoot { display:none } 
+}
